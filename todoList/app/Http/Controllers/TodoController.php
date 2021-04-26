@@ -9,9 +9,8 @@ class TodoController extends Controller
 {
    public function index()
    {
-      // $allTodos = Todo::all();
-      // dd($allTodos);
-       return view('todos.index');
+      $allTodos = Todo::all();
+       return view('todos.index')->with(['todos' => $allTodos]);
    }
    public function addTodo()
    {
@@ -19,8 +18,12 @@ class TodoController extends Controller
    }
    public function upload(Request $req)
    {
+       $req->validate([
+           'todos' => 'required'
+       ]);
      $todo =$req->title;
      Todo::create(['todos' => $todo]);
+     return redirect()->back();
    }
    public function updateTodo()
    {

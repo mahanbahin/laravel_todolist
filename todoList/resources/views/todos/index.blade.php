@@ -1,19 +1,20 @@
-<script src="//code.jquery.com/jquery-3.1.0.slim.min.js"></script>
-<div class="row">
-    <div class="col-md-12">
-        <div class="main-todo-input-wrap">
-            <div class="main-todo-input fl-wrap">
-                <div class="main-todo-input-item"> <input type="text" id="todo-list-item" placeholder="What will you do today?"> </div> <button class="add-items main-search-button">ADD</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <div class="main-todo-input-wrap">
-            <div class="main-todo-input fl-wrap todo-listing">
-                <ul id="list-items"></ul>
-            </div>
-        </div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todos</title>
+</head>
+<body>
+    <h1>My todo list</h1>
+    <h3>
+         <a href='/addTodo'>Add</a>
+    </h3>
+    @foreach($todos as $todo)
+        <li>
+            {{$todo->todos}}
+        </li>
+    @endforeach
+</body>
+</html>
