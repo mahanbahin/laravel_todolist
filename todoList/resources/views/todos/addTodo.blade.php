@@ -8,8 +8,11 @@
 </head>
 <body style='text-align:center'>
 <div>
-    <h1>My todo list</h1>
-    <form method='post', action='upload'>
+    <h1>Add new Todo</h1>
+    <h3>
+        <x-alert /> 
+    </h3>
+    <form action='upload', method='post'>
         @csrf
         <input type='text' name='title'>
         <input type='submit' value='Add'>

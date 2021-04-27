@@ -19,11 +19,11 @@ class TodoController extends Controller
    public function upload(Request $req)
    {
        $req->validate([
-           'todos' => 'required'
+           'title' => 'required'
        ]);
      $todo =$req->title;
      Todo::create(['todos' => $todo]);
-     return redirect()->back();
+     return redirect()->back()->with('success','New todo is added successfully');
    }
    public function updateTodo()
    {
