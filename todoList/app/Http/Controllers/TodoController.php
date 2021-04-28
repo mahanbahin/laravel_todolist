@@ -53,4 +53,10 @@ class TodoController extends Controller
        }
 
    }
+   public function deleteTodo($id)
+   {
+       $todo = Todo::find($id);
+       $todo->delete();
+    return redirect()->back()->with('success','Deleted successfully');
+   }
 }

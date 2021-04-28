@@ -23,6 +23,7 @@
         @endif
             <a href="{{asset('/'. $todo->id.'/updateTodo')}}">Edit</a>
             <a href="{{asset('/'. $todo->id.'/doneTodo')}}">Done</a>
+            <a href="{{asset('/'. $todo->id.'/deleteTodo')}}">Delete</a>
         </li>
     @endforeach
 </body>

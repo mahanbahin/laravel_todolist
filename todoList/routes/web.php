@@ -21,5 +21,8 @@ Route::post('/upload', 'App\Http\Controllers\TodoController@upload');
 
 Route::get('/{id}/updateTodo', 'App\Http\Controllers\TodoController@updateTodo');
 
-Route::patch('/saveUpdate', 'App\Http\Controllers\TodoController@saveUpdate');
+Route::patch('/saveUpdate', 'App\Http\Controllers\TodoController@saveUpdate')
+;
 Route::get('/{id}/doneTodo', 'App\Http\Controllers\TodoController@doneTodo');
+
+Route::get('/{id}/deleteTodo', 'App\Http\Controllers\TodoController@deleteTodo');
