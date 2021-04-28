@@ -19,4 +19,7 @@ Route::get('/addTodo', 'App\Http\Controllers\TodoController@addTodo');
 
 Route::post('/upload', 'App\Http\Controllers\TodoController@upload');
 
-Route::get('/updateTodo', 'App\Http\Controllers\TodoController@updateTodo');
+Route::get('/{id}/updateTodo', 'App\Http\Controllers\TodoController@updateTodo');
+
+Route::patch('/saveUpdate', 'App\Http\Controllers\TodoController@saveUpdate');
+Route::get('/{id}/doneTodo', 'App\Http\Controllers\TodoController@doneTodo');
